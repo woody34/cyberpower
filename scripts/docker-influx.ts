@@ -1,6 +1,10 @@
 import { execSync } from 'child_process'
 console.log('Check Docker for Influx')
 
+/*
+  Docker Influx: https://hub.docker.com/_/influxdb
+*/
+
 try {
   execSync('docker ps --all | grep -c "my-influxdb"');
   execSync('docker start my-influxdb')
